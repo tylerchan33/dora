@@ -7,6 +7,9 @@ d'ora is a music social media app that allows you to share albums and songs, alo
 
 We will using the [last.fm API](www.last.fm/api) at the moment.
 
+API Interaction
+![API](/api.png)
+
 # ERDs
 
 ## ERD
@@ -21,7 +24,7 @@ We will using the [last.fm API](www.last.fm/api) at the moment.
 | GET | /login | Read | Takes the user to the login page |
 | POST | /login | Create | Accepts a payload of data and logs a user in |
 | GET | /signup | Read | Takes the user to the sign up page |
-| POST | / | Create | Creates a new user and redirects the user to the homepage|
+| POST | /register | Create | Creates a new user and redirects the user to the homepage|
 | GET | /logout | Read | Logs a user out and sends them back to the home page
 
 ## User Routes
@@ -45,7 +48,7 @@ We will using the [last.fm API](www.last.fm/api) at the moment.
 | :----:| :---: | :-------: | :-----: |
 | GET | / | Read | Render the Home Page (logged in) |
 | GET | /post/new | Render a new post form |
-| POST | / | Create | Create a new post and have it show in feed |
+| POST | /posts | Create | Create a new post and have it show in feed |
 | GET | /post/:id | Read | Get more info on a post in the feed |
 | GET | /post/:id/edit | Read | Render an edit post form |
 | PUT | /post/:id | Update | Update a post’s information |
