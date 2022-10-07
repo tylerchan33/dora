@@ -9,7 +9,48 @@ We will using the [last.fm API](www.last.fm/api) at the moment.
 
 # ERDs
 
+
 # RESTful Routing Chart
+## Home Routes
+| Method | URL | Action | Description |
+|:-----:|:---:|:------:|:-----------:|
+| GET | / | READ | Takes the user to the homepage (not logged in) |
+| GET | /login | Read | Takes the user to the login page |
+| POST | /login | Create | Accepts a payload of data and logs a user in |
+| GET | /signup | Read | Takes the user to the sign up page |
+| POST | / | Create | Creates a new user and redirects the user to the homepage|
+| GET | /logout | Read | Logs a user out and sends them back to the home page
+
+## User Routes
+| Method | URL | Action | Description |
+|:-----:|:---:|:------:|:-----------:|
+| GET | / | Read | Takes the user to the homepage (logged in) |
+| GET | /:userId/profile | Read | Takes the user to their user page |
+| GET | /:userId/profile/edit | Read | Takes the user to their edit user page |
+| PUT | /:userId/profile | Update | Posts the updated user info and sends user to profile |
+
+## Music Routes
+| VERB | URL | Action | Notes |
+|:----:| :---: | :-------: | :-----:|
+| GET | /trending | Read | Renders the trending music page |
+| GET | /song/:id | Read | Get info on a certain song |
+| GET | /album/:id | Read | Get info on a certain album |
+
+## Posts Routes
+
+| VERB  | URL   | Action    | Notes |
+| :----:| :---: | :-------: | :-----: |
+| GET | / | Read | Render the Home Page (logged in) |
+| GET | /post/new | Render a new post form |
+| POST | / | Create | Create a new post and have it show in feed |
+| GET | /post/:id | Read | Get more info on a post in the feed |
+| GET | /post/:id/edit | Read | Render an edit post form |
+| PUT | /post/:id | Update | Update a post’s information |
+| DELETE | /post/:id | Destroy | Delete a post |
+
+
+
+
 
 # Wireframes of All User Views
 Homepage
@@ -31,12 +72,24 @@ Song/Album Info
 
 # User Stories
 
-- as a user, I would like to 
+*	as a user I want to create/edit/delete an account
+* 	as a user I want to be able to post a song or album with a comment about it 
+*	as a user I want to be able to delete and edit a post I make
+* 	as a user I want to be able to see posts created by other users
+*	as a user I want to be able to see other users
+*	as a user I want to be able to see a trending page with all of the trending songs and albums
+* 	as a user I want to be able to interact with other peoples posts 
+* 	as a user I want to be able to search a song or album and have the information displayed to me
 # MVP Goals/Stretch Goals
 
 ### MVP
+- user is able to post a song/album
 - a feed that shows what songs/albums other user's have posted
+
+
 
 ### Stretch Goals
 
-- allow users to play a song/album on the site
+- allow users to play a song/album embedded on the site
+- users are able to react to other's people's posts
+- logo for our app
