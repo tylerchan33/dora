@@ -9,6 +9,9 @@ We will using the [last.fm API](www.last.fm/api) at the moment.
 
 # ERDs
 
+## ERD
+![ERD](https://i.imgur.com/9mfoxI7.png)
+
 
 # RESTful Routing Chart
 ## Home Routes
@@ -85,6 +88,10 @@ Song/Album Info
 ### MVP
 - user is able to post a song/album
 - a feed that shows what songs/albums other user's have posted
+- a trending page with trending songs and albums
+- search function for songs and albums
+- editing and updating user profile
+- 
 
 
 
@@ -93,3 +100,4 @@ Song/Album Info
 - allow users to play a song/album embedded on the site
 - users are able to react to other's people's posts
 - logo for our app
+- delete profile 
